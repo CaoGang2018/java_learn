@@ -28,6 +28,7 @@ class Productor extends Thread{
 
     @Override
     public void run() {
+
         for (int i = 0; i < 100; i++) {
             container.push(new Chicken(i));
             System.out.println("生产者生产了第 " + i + " 只鸡！");
@@ -101,9 +102,6 @@ class synContainer{
         return chicken;
 
     }
-
-
-
 }
 
 

@@ -12,7 +12,6 @@ public class huawei_826 {
         String[] strs = {"cloxy", "apqud", "cxmnu", "kcotd", "bldwz"};
         String s = and_(strs, 5);
         move(new long[]{1,2,3});
-        move2(new long[]{1,2,3});
         int[] x = {1,1,1,1,2,1,1};
         int[] y = {5,2,5,4,5,1,6};
         Scanner sc = new Scanner(System.in);
@@ -58,24 +57,6 @@ public class huawei_826 {
         nums[0] = (nums[0] >> 2) + (t<<30);
         for(long num : nums){
             System.out.println(num);
-        }
-    }
-    public static void move2(long[] nums){
-        long num = nums[0] ;
-        long num2 = nums[0];
-        nums[0] = ((num&0x55555555)<<1) ^ ((num2 &0xaaaaaaaa)>>1);
-        long t = nums[0]%4;
-        for(int i = 1; i < nums.length; i++){
-            num = nums[i] ;
-            num2 = nums[i];
-            nums[i] = ((num&0x55555555)<<1) ^ ((num2 &0xaaaaaaaa)>>1);
-            long t2 = nums[i]%4;
-            nums[i] = (t << 30) + (nums[i] >> 2);
-            t = t2;
-        }
-        nums[0] = (nums[0] >> 2) + (t<<30);
-        for(long numa : nums){
-            System.out.println(numa);
         }
     }
 
