@@ -1,4 +1,4 @@
-package others;
+package tencent0906;
 
 import java.util.Scanner;
 
@@ -24,24 +24,7 @@ public class tencent0906 {
         }
         System.out.println(uf.findZero(n));
     }
-    public static void minMax(){
-        int[] nums = {1,3,2,5,7,8};
-        int[] t = new int[nums.length];
-        t[0] = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            t[i] = Math.max(nums[i], t[i-1]);
-        }
-        if(nums[nums.length - 1] == t[nums.length - 1])
-            System.out.println(nums[nums.length - 1]);
-        int min = nums[nums.length - 1];
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if(nums[i] < min && nums[i] == t[i]) {
-                min = nums[i];
-                System.out.println(nums[i]);
-            }
-            else break;
-        }
-    }
+
 }
 
 class unionFind{
