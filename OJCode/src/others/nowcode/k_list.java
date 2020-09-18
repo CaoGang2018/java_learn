@@ -7,13 +7,13 @@ import java.util.ArrayList;
  * @date 2020/9/4 20:41
  */
 class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-  }
+    int val;
+    ListNode next;
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
 public class k_list {
     public ListNode mergeKLists(ArrayList<ListNode> lists) {
         if (lists.size() == 0) return null;

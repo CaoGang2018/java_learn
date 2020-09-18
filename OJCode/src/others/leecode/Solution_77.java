@@ -1,8 +1,6 @@
 package others.leecode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author admin_cg
@@ -11,6 +9,10 @@ import java.util.Scanner;
 public class Solution_77 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        User u = new User("ccccc");
+        u.show();
+      //  Scanner sc = new Scanner(System.in);
         char[] chars = sc.nextLine().toCharArray();
         for (int i = 0; i < chars.length; i++) {
             if(chars[i] >='a' && chars[i] <= 'z'){
@@ -39,5 +41,15 @@ public class Solution_77 {
             backtrack(n, cur, i+1, k);
             cur.remove(cur.size()-1);
         }
+    }
+}
+class User{
+    private String name = "zssss";
+
+    public User(String name) {
+        this.name = name;
+    }
+    public void show(){
+        System.out.println(name);
     }
 }
