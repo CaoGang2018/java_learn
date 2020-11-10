@@ -1,6 +1,7 @@
 import java.io.Console;
 import java.io.File;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * @author admin_cg
@@ -9,12 +10,10 @@ import java.util.Arrays;
 
 public class learn_java {
     public static void main(String[] args) {
-        // String 类 长度 method
-        String s = "java学习";
-        System.out.println(s.length());
-        System.out.println(s.codePointCount(0,4));
 
-        getFileList("E:\\java");
+        Scanner sc = new Scanner(System.in);
+        System.out.println(numWays(sc.nextInt()));
+        sc.close();
 
     }
 
@@ -32,5 +31,15 @@ public class learn_java {
             }
             else getFileList(file1.getPath());
         }
+    }
+
+    public static int numWays(int n){
+        int a = 1, b = 1, sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum = (a + b) % 1000000007;
+            a = b;
+            b = sum;
+        }
+        return a;
     }
 }
